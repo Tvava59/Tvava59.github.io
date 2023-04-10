@@ -1,0 +1,620 @@
+ * {
+     box-sizing: border-box;
+     margin: 0px auto;
+     max-width: 1100px;
+ }
+
+
+ body {
+     margin: 0;
+     padding: 0;
+     font-family: Arial, sans-serif;
+     background-color: #F5E9BE;
+ }
+
+ header img {
+     float: none;
+     max-width: 100%;
+     padding: auto;
+     margin: 0;
+ }
+
+ /* 懸浮小標 */
+ .box {
+     position: relative;
+ }
+
+ .box:hover::before {
+     position: absolute;
+     top: 22px;
+     right: 320px;
+     color: white;
+     font-family: 微軟正黑體;
+     content: '早安尼好(๑´ڡ`๑)';
+     background-color: #F5E9BE;
+     padding: 5px;
+     border-radius: 10px;
+     z-index: 3;
+ }
+
+ .box:hover::after {
+     content: '';
+     background: #F5E9BE;
+     height: 15px;
+     width: 15px;
+     position: absolute;
+     top: 43px;
+     right: 420px;
+
+     -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+     transform: rotate(50deg);
+
+ }
+
+ /**/
+
+
+ nav {
+
+     text-align: center;
+     background-color: aliceblue;
+
+ }
+
+ nav a {
+     padding: 10px;
+     display: inline-block;
+     font-size: 23px;
+ }
+
+ nav a:hover {
+     background-color: #F22B0C;
+     color: white;
+
+ }
+
+
+
+ nav ul {
+     margin: 0;
+     padding: 0;
+     list-style-type: none;
+ }
+
+ nav ul li {
+     display: inline-block;
+     margin: 0 20px;
+ }
+
+ nav ul li a {
+     font-weight: bold;
+     color: #f74328;
+     text-decoration: none;
+
+ }
+
+ main {
+     width: 100%;
+     margin: 0;
+     padding: 0px;
+ }
+
+ /* 個人資料 */
+ .container.x {
+     justify-items: stretch;
+     background: url("image/cherry.jpg");
+     background-size: contain;
+     display: grid;
+     grid-gap: 40px;
+     grid-template-rows: 50px 1fr 50px;
+     grid-template-columns: 50px 1fr 1fr 1fr 50px;
+     grid-template-areas:
+         ". . . . ."
+         ". b1 b2 b3 ."
+         ". . . . .";
+     min-height: 400px;
+
+
+ }
+
+ .item1 {
+     padding: 30px;
+     padding-top: 50px;
+     margin: 0;
+     border-radius: 50px;
+     background-color: white;
+     grid-area: b1;
+     text-align: center;
+ }
+
+ .item2 {
+     padding: 20px;
+     margin: 0;
+     height: auto;
+     border-radius: 50px;
+     background-color: white;
+     grid-area: b2;
+     text-align: center;
+ }
+
+ .item3 {
+     padding: 30px;
+     padding-top: 50px;
+     margin: 0;
+     border-radius: 50px;
+     background-color: white;
+     grid-area: b3;
+     text-align: center;
+ }
+
+ .person {
+     font-size: 30px;
+     font-weight: bolder;
+     color: #11417B;
+     line-height: 45px;
+ }
+
+ .lee {
+     font-size: 40px;
+     font-weight: bolder;
+     color: #11417B;
+ }
+
+ .me {
+     line-height: 40px;
+     font-size: 20px;
+     font-weight: bolder;
+     color: #11417B;
+ }
+
+ .icon {
+     width: 50px;
+     height: 50px;
+     padding: 10px;
+ }
+
+ .mee {
+     line-height: 40px;
+     font-size: 20px;
+     font-weight: bolder;
+     color: #11417B;
+ }
+
+ .turee:hover {
+     background-color: #f6705b;
+     color: white;
+     width: 100px;
+     border-radius: 20px;
+     cursor: pointer;
+ }
+
+ /*烏龜小視窗*/
+ dialog {
+     border: 10px;
+     box-shadow: 0 2px 6px rgb(112, 46, 46);
+     border-radius: 30px;
+     margin: auto;
+     width: 500px;
+ }
+
+ dialog::backdrop {
+     background-color: rgb(245, 233, 190, 0.5)
+ }
+
+ .turr {
+     color: #11417B;
+ }
+
+ dialog img {
+     margin-top: 10px;
+     width: 200px;
+     border-radius: 10px;
+ }
+
+ .cl {
+     width: 24px;
+ }
+
+ /*slogan*/
+ h1 {
+     text-align: center;
+     font-family: 'Shrikhand', cursive;
+     color: #F22B0C;
+
+ }
+
+ /* 社團經驗 */
+ .container.y {
+     justify-items: stretch;
+     display: grid;
+     background-image: url("image/cherry.jpg");
+     background-size: cover;
+     min-height: 400px;
+     padding: 0px;
+
+ }
+
+ .item4 {
+     padding: 30px;
+     margin: 50px 50px;
+     border-radius: 50px;
+     background-color: white;
+     text-align: center;
+ }
+
+ .idv {
+     float: right;
+     width: 35%;
+     height: 90%;
+     margin: 10px 10px;
+     margin-left: 52px;
+     border-radius: 20px;
+     transition: transform 0.2s;
+ }
+
+
+ .idv:hover {
+     transform: scale(1.1);
+ }
+
+ .t1 {
+     font-size: larger;
+     font-weight: 900;
+     color: #F22B0C;
+ }
+
+ .socitey1 {
+     font-size: 15px;
+     color: #11417B;
+     font-weight: 900;
+     margin-right: 300px;
+     line-height: 40px;
+ }
+
+ .container.c {
+     display: flex;
+     justify-content: center;
+ }
+
+ .giphy {
+     width: 100px;
+     border-radius: 100%;
+ }
+
+
+ /* 專案經驗 */
+ .container.z {
+     display: grid;
+     background-image: url("image/cherry.jpg");
+     background-size: cover;
+     min-height: 400px;
+     padding: 0px;
+ }
+
+ .item5 {
+     padding: 30px;
+     margin: 50px 50px;
+     border-radius: 30px;
+     background-color: white;
+     text-align: center;
+ }
+
+ .t2 {
+     color: #11417B;
+     font-size: 25px;
+     font-weight: 900;
+ }
+
+ .dodo {
+     width: 150px;
+     height: 150px;
+     float: left;
+     transition: transform 0.2s;
+     margin: 0px 20px 0px 20px;
+
+ }
+
+ .dodo:hover {
+     transform: scale(1.1);
+ }
+
+ .socitey2 {
+     font-size: 15px;
+     color: #11417B;
+     font-weight: 900;
+     margin: 30px 50px 30px 100px;
+     line-height: 40px;
+     text-align: left;
+
+ }
+
+ hr {
+     border-color: #F5E9BE;
+     border-width: 2px;
+     border-style: solid;
+ }
+
+ .eyes {
+     width: 100px;
+     float: right;
+     margin: 30px;
+     margin-bottom: 0px;
+     transition: transform 0.2s;
+ }
+
+ .eyes:hover {
+     transform: scale(1.1);
+ }
+
+ .socitey3 {
+     font-size: 15px;
+     color: #11417B;
+     font-weight: 900;
+     margin-left: 50px;
+     line-height: 40px;
+     text-align: right;
+     margin-top: 30px;
+     margin-bottom: 20px;
+ }
+
+ .giphya {
+     margin-right: 100px;
+     width: 100px;
+ }
+
+ /* 工讀與程式 */
+ .container.a {
+     justify-items: stretch;
+     background: url("image/cherry.jpg");
+     background-size: cover;
+     display: grid;
+     grid-gap: 40px;
+     grid-template-rows: 50px 1fr 50px;
+     grid-template-columns: 50px 1fr 1fr 50px;
+     grid-template-areas:
+         ". . . ."
+         ". b6 b7 ."
+         ". . . .";
+     min-height: 400px;
+
+ }
+
+ .item6 {
+     padding: 20px;
+     margin: 0;
+     border-radius: 50px;
+     background-color: white;
+     grid-area: b6;
+     text-align: center;
+ }
+
+ .pt {
+     font-size: larger;
+ }
+
+ ul {
+     font-weight: 900;
+     margin: 0;
+     padding: 0;
+     list-style-type: none;
+     color: #11417B;
+     line-height: 50px;
+ }
+
+ .item7 {
+     padding: 20px;
+     margin: 0;
+     border-radius: 50px;
+     background-color: white;
+     grid-area: b7;
+     text-align: center;
+ }
+
+ footer {
+     background-color: #BECEE1;
+     color: #FFF;
+     padding: 20px;
+     text-align: center;
+ }
+
+ .t3 {
+     color: #11417B;
+     font-size: 20px;
+     font-weight: 900;
+     margin-bottom: 10px;
+ }
+
+ .r1 {
+     color: #11417B;
+     font-size: 10px;
+     font-weight: 900;
+     text-align: left;
+     margin-left: 70px;
+ }
+
+ .container b {
+     margin: 100px auto;
+     width: 500px;
+     text-align: center;
+
+ }
+
+ /*進度條1*/
+ .progress {
+     width: 240px;
+     height: 25px;
+     border-radius: 25px;
+     background: #eee;
+     margin-bottom: 20px;
+
+
+ }
+
+ .progress-bar {
+     width: 240px;
+     height: 25px;
+     border-radius: 25px;
+     border: 1px solid #eee;
+     transition: width .2s linear;
+
+ }
+
+ .progress-striped .progress-bar {
+     background-color: #FCBC51;
+     width: 60%;
+     background-image: linear-gradient(90deg, #ffee6c, #F5E9BE, 100%, transparent 0);
+     animation: progressAnimationStrike 6s;
+     margin: 0px;
+ }
+
+ @keyframes progressAnimationStrike {
+     from {
+         width: 0;
+     }
+
+     to {
+         width: 60%;
+     }
+ }
+
+ /*進度條2*/
+ .progressa {
+     width: 240px;
+     height: 25px;
+     border-radius: 25px;
+     background: #eee;
+     margin-bottom: 20px;
+
+ }
+
+ .progressa-bar {
+     width: 240px;
+     height: 25px;
+     border-radius: 25px;
+     border: 1px solid #eee;
+     transition: width .2s linear;
+
+ }
+
+ .progressa-striped .progressa-bar {
+     background-color: #FCBC51;
+     width: 80%;
+     background-image: linear-gradient(90deg, rgb(246, 145, 145), #f5d5d5, 100%, transparent 0);
+     animation: progressaAnimationStrike 6s;
+     margin: 0px;
+ }
+
+ @keyframes progressaAnimationStrike {
+     from {
+         width: 0;
+     }
+
+     to {
+         width: 80%;
+     }
+ }
+
+ /*進度條3*/
+ .progressb {
+     width: 240px;
+     height: 25px;
+     border-radius: 25px;
+     background: #eee;
+
+ }
+
+ .progressb-bar {
+     width: 240px;
+     height: 25px;
+     border-radius: 25px;
+     border: 1px solid #eee;
+     transition: width .2s linear;
+
+ }
+
+ .progressb-striped .progressb-bar {
+     background-color: #FCBC51;
+     width: 40%;
+     background-image: linear-gradient(90deg, rgb(125, 174, 238), #c0daea, 100%, transparent 0);
+     animation: progressbAnimationStrike 6s;
+     margin: 0px;
+ }
+
+ @keyframes progressbAnimationStrike {
+     from {
+         width: 0;
+     }
+
+     to {
+         width: 40%;
+     }
+ }
+
+
+ .back-to-top {
+     display: none;
+     position: fixed;
+     bottom: 20px;
+     right: 30px;
+     z-index: 60;
+     border: 1px solid #89bad8;
+     outline: none;
+     background-color: rgba(195, 221, 244, 0.774);
+     color: #83a9e7;
+     cursor: pointer;
+     padding: 10px 15px 15px 15px;
+     border-radius: 100%;
+
+ }
+
+ .back-to-top:hover {
+
+     background-color: #BECEE1;
+     color: #fff;
+
+ }
+
+ /*小驚喜*/
+ .overlay {
+     position: absolute;
+     display: none;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     padding: 300px;
+     margin-top: 1600px;
+     margin-bottom: -300px;
+     background: rgba(149, 47, 47, 0.8);
+     z-index: 1000;
+ }
+
+
+
+ .popup {
+     position: absolute;
+     width: 50%;
+     height: 450;
+     top: 20%;
+     left: 25%;
+     bottom: 15%;
+     text-align: center;
+     background: rgb(255, 254, 254);
+     padding-bottom: -50px;
+     border-radius: 15px;
+ }
+
+ .popup h3 {
+     margin-top: -20px;
+     font-size: 15px;
+     height: 20px;
+     line-height: 10px;
+     color: black;
+ }
+
+ .CloseIcon {
+     margin: 10px 20px;
+     text-align: right;
+     cursor: pointer;
+ }
